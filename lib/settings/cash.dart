@@ -18,7 +18,7 @@ class Cash extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     color: Color(0xB0232C2D)))),
         Container(
-          padding: const EdgeInsets.fromLTRB(0, 12, 0, 12),
+          padding: const EdgeInsets.fromLTRB(21, 12, 0, 12),
           child: const Text('Cash',
               textAlign: TextAlign.end,
               style: TextStyle(

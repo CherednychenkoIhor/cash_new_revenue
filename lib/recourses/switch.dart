@@ -28,7 +28,7 @@ class _SwitchWidgetState extends State<SwitchWidget> {
               },
               activeTrackColor: const Color(0xff65bcbf),
               activeColor: Colors.white,
-              inactiveTrackColor: const Color(0x80f8777d),
+              inactiveTrackColor: const Color(0xfff8777d),
               inactiveThumbColor: Colors.white,
             ),
           ),
@@ -39,7 +39,7 @@ class _SwitchWidgetState extends State<SwitchWidget> {
                     fontFamily: 'SF_Pro_Text',
                     fontSize: 40,
                     fontWeight: FontWeight.bold,
-                    color: isOn ? Colors.white : const Color(0x80f8777d))),
+                    color: isOn ? Colors.white : const Color(0xfff8777d))),
           ),
           Container(
             child: Text('\$0',
@@ -50,7 +50,7 @@ class _SwitchWidgetState extends State<SwitchWidget> {
                     fontWeight: FontWeight.bold,
                     color: isOn
                         ? const Color(0xff65bcbf)
-                        : const Color(0x80f8777d))),
+                        : const Color(0xfff8777d))),
           ),
           Container(
             margin: const EdgeInsets.fromLTRB(0, 0, 14, 0),
@@ -58,7 +58,7 @@ class _SwitchWidgetState extends State<SwitchWidget> {
               maxWidth: 2,
               maxHeight: 48,
             ),
-            color: const Color(0x80f8777d),
+            color: const Color(0xfff8777d),
           ),
         ],
       ),

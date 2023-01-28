@@ -9,7 +9,7 @@ class Date extends StatelessWidget {
     return Row(
       children: [
         Container(
-            margin: const EdgeInsets.fromLTRB(16, 13, 265, 13),
+            margin: const EdgeInsets.fromLTRB(16, 13, 275, 13),
             child: const Text('Date',
                 style: TextStyle(
                     fontFamily: 'SF_Pro_Text',
