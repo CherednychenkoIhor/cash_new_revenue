@@ -1,7 +1,11 @@
-import 'package:cash_new_revenue/utils/colors.dart';
-import 'package:cash_new_revenue/utils/const.dart';
+import 'package:cash_new_revenue/recourses/switch.dart';
+import 'package:cash_new_revenue/settings/otional.dart';
+import 'package:cash_new_revenue/settings/cash.dart';
+import 'package:cash_new_revenue/settings/date.dart';
 import 'package:flutter/material.dart';
 
+import '../settings/salary.dart';
+import 'mini_appBar.dart';
 import 'numbers.dart';
 
 class HomePage extends StatelessWidget {
@@ -15,85 +19,12 @@ class HomePage extends StatelessWidget {
         color: Colors.white,
         child: Column(
           children: [
-            Row(
-              mainAxisSize: MainAxisSize.max,
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: <Widget>[
-                TextButton(
-                    onPressed: () {},
-                    child: const Text('Cansel',
-                        style: TextStyle(
-                            fontFamily: 'SF_Pro_Text',
-                            fontSize: 17,
-                            fontWeight: FontWeight.bold,
-                            color: Primary))),
-                const Text('Income',
-                    style: TextStyle(
-                      fontFamily: 'SF_Pro_Text',
-                      fontSize: 17,
-                      fontWeight: FontWeight.bold,
-                    )),
-                TextButton(
-                    onPressed: () {},
-                    child: const Text('Done',
-                        style: TextStyle(
-                            fontFamily: 'SF_Pro_Text',
-                            fontSize: 17,
-                            fontWeight: FontWeight.bold,
-                            color: Primary))),
-              ],
-            ),
+            const MiniAppBar(),
             const Divider(
               height: 1,
               color: Color(0x2c232c2d),
             ),
-            Container(
-              margin: const EdgeInsets.fromLTRB(0, 16, 0, 0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  // ToggleButtons(
-                  //   isSelected: isSelected,
-                  //   onPressed: (int index) {
-                  //     setState(() {
-                  //       isSelected[index] = !isSelected[index];
-                  //     });
-                  //   },
-                  //   borderRadius: const BorderRadius.all(Radius.circular(8)),
-                  //   selectedBorderColor: Colors.green[700],
-                  //   selectedColor: Colors.white,
-                  //   fillColor: Colors.green[200],
-                  //   color: Colors.green[400],
-                  //   constraints: const BoxConstraints(
-                  //     minHeight: 40.0,
-                  //     minWidth: 80.0,
-                  //   ),
-                  //   children: const <Widget>[
-                  //     Icon(Icons.circle),
-                  //     Icon(Icons.circle),
-                  //   ],
-                  // )
-                  Container(
-                    child: const Text('\$0',
-                        textAlign: TextAlign.end,
-                        style: TextStyle(
-                            fontFamily: 'SF_Pro_Text',
-                            fontSize: 40,
-                            fontWeight: FontWeight.bold,
-                            color: Primary)),
-                  ),
-                  Container(
-                    margin: const EdgeInsets.fromLTRB(0, 0, 14, 0),
-                    constraints: const BoxConstraints(
-                      maxWidth: 2,
-                      maxHeight: 48,
-                    ),
-                    color: const Color(0x80f8777d),
-                  ),
-                ],
-              ),
-            ),
+            const SwitchWidget(),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
@@ -113,126 +44,33 @@ class HomePage extends StatelessWidget {
               indent: 16,
               color: Color(0x59232c2d),
             ),
-            Row(
-              children: [
-                Container(
-                    margin: const EdgeInsets.fromLTRB(16, 13, 212, 13),
-                    child: const Text('Category',
-                        style: TextStyle(
-                            fontFamily: 'SF_Pro_Text',
-                            fontSize: 15,
-                            fontWeight: FontWeight.bold,
-                            color: Color(0xB0232C2D)))),
-                Container(
-                  padding: const EdgeInsets.fromLTRB(0, 12, 0, 12),
-                  child: const Text('Salary',
-                      textAlign: TextAlign.end,
-                      style: TextStyle(
-                          fontFamily: 'SF_Pro_Text',
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          color: Primary)),
-                ),
-                Expanded(child: IconButton(
-                    onPressed: () {},
-                    icon: navig_nxt,
-                    padding: const EdgeInsets.fromLTRB(0, 14.11, 0, 14.11),
-                    alignment: Alignment.bottomLeft),),
-              ],
-            ),
+
+            const Salary(),
+
             const Divider(
               height: 1,
               indent: 16,
               color: Color(0x59232c2d),
             ),
-            Row(
-              children: [
-                Container(
-                    margin: const EdgeInsets.fromLTRB(16, 13, 265, 13),
-                    child: const Text('Date',
-                        style: TextStyle(
-                            fontFamily: 'SF_Pro_Text',
-                            fontSize: 15,
-                            fontWeight: FontWeight.bold,
-                            color: Color(0xB0232C2D)))),
-                TextButton(
-                  onPressed: () {},
-                  child: const Text('Today',
-                      textAlign: TextAlign.end,
-                      style: TextStyle(
-                          fontFamily: 'SF_Pro_Text',
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          color: Primary)),
-                )
-              ],
-            ),
+
+            const Date(),
+
             const Divider(
               height: 1,
               indent: 16,
               color: Color(0x59232c2d),
             ),
-            Row(
-              children: [
-                Container(
-                    margin: const EdgeInsets.fromLTRB(16, 13, 227, 13),
-                    child: const Text('Account',
-                        style: TextStyle(
-                            fontFamily: 'SF_Pro_Text',
-                            fontSize: 15,
-                            fontWeight: FontWeight.bold,
-                            color: Color(0xB0232C2D)))),
-                Container(
-                  padding: const EdgeInsets.fromLTRB(0, 12, 0, 12),
-                  child: const Text('Cash',
-                      textAlign: TextAlign.end,
-                      style: TextStyle(
-                          fontFamily: 'SF_Pro_Text',
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          color: Primary)),
-                ),
-                Expanded(child: IconButton(
-                    onPressed: () {},
-                    icon: navig_nxt,
-                    padding: const EdgeInsets.fromLTRB(0, 14.11, 0, 14.11),
-                    alignment: Alignment.bottomLeft),),
-              ],
-            ),
+
+            const Cash(),
+
             const Divider(
               height: 1,
               indent: 16,
               color: Color(0x59232c2d),
             ),
-            Row(
-              children: [
-                Container(
-                    margin: const EdgeInsets.fromLTRB(16, 13, 98, 13),
-                    child: const Text('Transfer from Account',
-                        style: TextStyle(
-                            fontFamily: 'SF_Pro_Text',
-                            fontSize: 15,
-                            fontWeight: FontWeight.bold,
-                            color: Color(0xB0232C2D)))),
-                Container(
-                  padding: const EdgeInsets.fromLTRB(0, 12, 0, 12),
-                  child: const Text('Optional',
-                      textAlign: TextAlign.end,
-                      style: TextStyle(
-                          fontFamily: 'SF_Pro_Text',
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0x56232C2D))),
-                ),
-                Expanded(
-                  child: IconButton(
-                      onPressed: () {},
-                      icon: navig_nxt,
-                      padding: const EdgeInsets.fromLTRB(0, 14.11, 0, 14.11),
-                      alignment: Alignment.bottomLeft),
-                ),
-              ],
-            ),
+
+            const Optional(),
+
             const Divider(
               height: 1,
               indent: 16,
@@ -255,7 +93,6 @@ class HomePage extends StatelessWidget {
               color: const Color(0x90D2D5DB),
               child: const numbersOfKeyboard(),
             )
-
           ],
         ),
       ),
