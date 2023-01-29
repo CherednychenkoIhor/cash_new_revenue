@@ -8,6 +8,7 @@ import 'package:cash_new_revenue/recourses/numbers.dart';
 import 'package:cash_new_revenue/utils/colors.dart';
 import 'package:cash_new_revenue/utils/const.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -34,13 +35,14 @@ class HomePage extends StatelessWidget {
                     top: 8,
                     bottom: 8,
                   ),
-                  child: const Text(
+                  child: Text(
                     settings,
                     textAlign: TextAlign.end,
-                    style: TextStyle(
-                      fontFamily: 'SF_Pro_Text',
-                      fontSize: 14,
-                      color: optionalColor,
+                    style: GoogleFonts.sourceSansPro(
+                      textStyle: const TextStyle(
+                        fontSize: 14,
+                        color: optionalColor,
+                      ),
                     ),
                   ),
                 ),

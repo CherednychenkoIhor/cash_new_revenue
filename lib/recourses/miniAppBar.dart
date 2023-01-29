@@ -27,11 +27,6 @@ class MiniAppBar extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
           ),
-          // TextStyle(
-          //   fontFamily: 'SF_Pro_Text',
-          //   fontSize: 17,
-          //   fontWeight: FontWeight.bold,
-          // ),
         ),
         TextButton(
           onPressed: () {},
