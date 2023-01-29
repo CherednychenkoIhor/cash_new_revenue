@@ -25,11 +25,11 @@ class Salary extends StatelessWidget {
                   fontFamily: 'SF_Pro_Text',
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
-                  color: Primary)),
+                  color: primary)),
         ),
         Expanded(child: IconButton(
             onPressed: () {},
-            icon: navig_nxt,
+            icon: navigNext,
             padding: const EdgeInsets.fromLTRB(0, 14.11, 0, 14.11),
             alignment: Alignment.bottomLeft),),
       ],

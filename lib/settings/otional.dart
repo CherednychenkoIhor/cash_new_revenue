@@ -29,7 +29,7 @@ class Optional extends StatelessWidget {
         Expanded(
           child: IconButton(
               onPressed: () {},
-              icon: navig_nxt,
+              icon: navigNext,
               padding: const EdgeInsets.fromLTRB(0, 14.11, 0, 14.11),
               alignment: Alignment.bottomLeft),
         ),

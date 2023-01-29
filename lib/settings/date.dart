@@ -24,7 +24,7 @@ class Date extends StatelessWidget {
                   fontFamily: 'SF_Pro_Text',
                   fontSize: 16,
                   fontWeight: FontWeight.bold,
-                  color: Primary)),
+                  color: primary)),
         )
       ],
     );

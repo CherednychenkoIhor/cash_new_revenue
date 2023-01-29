@@ -18,7 +18,7 @@ class MiniAppBar extends StatelessWidget {
                     fontFamily: 'SF_Pro_Text',
                     fontSize: 17,
                     fontWeight: FontWeight.bold,
-                    color: Primary))),
+                    color: primary))),
         const Text('Income',
             style: TextStyle(
               fontFamily: 'SF_Pro_Text',
@@ -32,7 +32,7 @@ class MiniAppBar extends StatelessWidget {
                     fontFamily: 'SF_Pro_Text',
                     fontSize: 17,
                     fontWeight: FontWeight.bold,
-                    color: Primary))),
+                    color: primary))),
       ],
     );
   }
