@@ -1,17 +1,18 @@
+import 'package:cash_new_revenue/utils/colors.dart';
 import 'package:cash_new_revenue/utils/const.dart';
 import 'package:flutter/material.dart';
 
-class Salary extends StatelessWidget {
-  const Salary({Key? key}) : super(key: key);
+class Optional extends StatelessWidget {
+  const Optional({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         Container(
-          margin: const EdgeInsets.fromLTRB(16, 13, 212, 13),
+          margin: const EdgeInsets.fromLTRB(16, 13, 98, 13),
           child: Text(
-            category,
+            transfer,
             style: sfProText15,
           ),
         ),
@@ -21,10 +22,15 @@ class Salary extends StatelessWidget {
             top: 12,
             bottom: 12,
           ),
-          child: Text(
-            salary,
+          child: const Text(
+            optional,
             textAlign: TextAlign.end,
-            style: sfProText16,
+            style: TextStyle(
+              fontFamily: 'SF_Pro_Text',
+              fontSize: 16,
+              fontWeight: FontWeight.bold,
+              color: optionalColor,
+            ),
           ),
         ),
         Expanded(

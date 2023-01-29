@@ -1,4 +1,4 @@
-import 'package:cash_new_revenue/utils/colors.dart';
+import 'package:cash_new_revenue/utils/const.dart';
 import 'package:flutter/material.dart';
 
 class Date extends StatelessWidget {
@@ -9,23 +9,20 @@ class Date extends StatelessWidget {
     return Row(
       children: [
         Container(
-            margin: const EdgeInsets.fromLTRB(16, 13, 275, 13),
-            child: const Text('Date',
-                style: TextStyle(
-                    fontFamily: 'SF_Pro_Text',
-                    fontSize: 15,
-                    fontWeight: FontWeight.bold,
-                    color: Color(0xB0232C2D)))),
+          margin: const EdgeInsets.fromLTRB(16, 13, 275, 13),
+          child: Text(
+            date,
+            style: sfProText15,
+          ),
+        ),
         TextButton(
           onPressed: () {},
-          child: const Text('Today',
-              textAlign: TextAlign.end,
-              style: TextStyle(
-                  fontFamily: 'SF_Pro_Text',
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                  color: primary)),
-        )
+          child: Text(
+            today,
+            textAlign: TextAlign.end,
+            style: sfProText16,
+          ),
+        ),
       ],
     );
   }

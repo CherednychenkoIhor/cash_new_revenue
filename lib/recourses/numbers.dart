@@ -1,8 +1,9 @@
+import 'package:cash_new_revenue/utils/colors.dart';
 import 'package:cash_new_revenue/utils/const.dart';
 import 'package:flutter/material.dart';
 
-class numbersOfKeyboard extends StatelessWidget {
-  const numbersOfKeyboard({Key? key}) : super(key: key);
+class NumbersOfKeyboard extends StatelessWidget {
+  const NumbersOfKeyboard({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -13,60 +14,40 @@ class numbersOfKeyboard extends StatelessWidget {
             Container(
               width: 117,
               height: 66,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                shape: BoxShape.rectangle,
-                borderRadius: BorderRadius.circular(30.0),
-              ),
-              margin: const EdgeInsets.fromLTRB(6, 6, 6, 6),
+              decoration: boxDecoration,
+              margin: const EdgeInsets.all(6),
               child: Column(
                 children: [
                   Expanded(
                     child: TextButton(
                       onPressed: () {},
-                      child: const Text(
+                      child: Text(
                         '1',
-                        style: TextStyle(
-                            fontFamily: 'SF_Pro_Text',
-                            fontSize: 25,
-                            fontWeight: FontWeight.bold,
-                            color: Color(0xFF000000)),
+                        style: sfProText25,
                       ),
                     ),
-                  )
+                  ),
                 ],
               ),
             ),
             Container(
               width: 117,
               height: 66,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                shape: BoxShape.rectangle,
-                borderRadius: BorderRadius.circular(30.0),
-              ),
-              margin: const EdgeInsets.fromLTRB(6, 6, 6, 6),
+              decoration: boxDecoration,
+              margin: const EdgeInsets.all(6),
               child: Column(
                 children: [
                   TextButton(
                     onPressed: () {},
-                    child: const Text(
+                    child: Text(
                       '2',
-                      style: TextStyle(
-                          fontFamily: 'SF_Pro_Text',
-                          fontSize: 25,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xFF000000)),
+                      style: sfProText25,
                     ),
                   ),
-                  const Expanded(
+                  Expanded(
                     child: Text(
-                      'A B C',
-                      style: TextStyle(
-                          fontFamily: 'SF_Pro_Text',
-                          fontSize: 10,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xFF000000)),
+                      underNumber2,
+                      style: sfProText10,
                     ),
                   ),
                 ],
@@ -75,33 +56,21 @@ class numbersOfKeyboard extends StatelessWidget {
             Container(
               width: 117,
               height: 66,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                shape: BoxShape.rectangle,
-                borderRadius: BorderRadius.circular(30.0),
-              ),
-              margin: const EdgeInsets.fromLTRB(6, 6, 6, 6),
+              decoration: boxDecoration,
+              margin: const EdgeInsets.all(6),
               child: Column(
                 children: [
                   TextButton(
                     onPressed: () {},
-                    child: const Text(
+                    child: Text(
                       '3',
-                      style: TextStyle(
-                          fontFamily: 'SF_Pro_Text',
-                          fontSize: 25,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xFF000000)),
+                      style: sfProText25,
                     ),
                   ),
-                  const Expanded(
+                  Expanded(
                     child: Text(
-                      'D E F',
-                      style: TextStyle(
-                          fontFamily: 'SF_Pro_Text',
-                          fontSize: 10,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xFF000000)),
+                      underNumber3,
+                      style: sfProText10,
                     ),
                   ),
                 ],
@@ -114,33 +83,21 @@ class numbersOfKeyboard extends StatelessWidget {
             Container(
               width: 117,
               height: 66,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                shape: BoxShape.rectangle,
-                borderRadius: BorderRadius.circular(30.0),
-              ),
-              margin: const EdgeInsets.fromLTRB(6, 6, 6, 6),
+              decoration: boxDecoration,
+              margin: const EdgeInsets.all(6),
               child: Column(
                 children: [
                   TextButton(
                     onPressed: () {},
-                    child: const Text(
+                    child: Text(
                       '4',
-                      style: TextStyle(
-                          fontFamily: 'SF_Pro_Text',
-                          fontSize: 25,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xFF000000)),
+                      style: sfProText25,
                     ),
                   ),
-                  const Expanded(
+                  Expanded(
                     child: Text(
-                      'G H I',
-                      style: TextStyle(
-                          fontFamily: 'SF_Pro_Text',
-                          fontSize: 10,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xFF000000)),
+                      underNumber4,
+                      style: sfProText10,
                     ),
                   ),
                 ],
@@ -149,33 +106,21 @@ class numbersOfKeyboard extends StatelessWidget {
             Container(
               width: 117,
               height: 66,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                shape: BoxShape.rectangle,
-                borderRadius: BorderRadius.circular(30.0),
-              ),
-              margin: const EdgeInsets.fromLTRB(6, 6, 6, 6),
+              decoration: boxDecoration,
+              margin: const EdgeInsets.all(6),
               child: Column(
                 children: [
                   TextButton(
                     onPressed: () {},
-                    child: const Text(
+                    child: Text(
                       '5',
-                      style: TextStyle(
-                          fontFamily: 'SF_Pro_Text',
-                          fontSize: 25,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xFF000000)),
+                      style: sfProText25,
                     ),
                   ),
-                  const Expanded(
+                  Expanded(
                     child: Text(
-                      'J K L',
-                      style: TextStyle(
-                          fontFamily: 'SF_Pro_Text',
-                          fontSize: 10,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xFF000000)),
+                      underNumber5,
+                      style: sfProText10,
                     ),
                   ),
                 ],
@@ -184,33 +129,21 @@ class numbersOfKeyboard extends StatelessWidget {
             Container(
               width: 117,
               height: 66,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                shape: BoxShape.rectangle,
-                borderRadius: BorderRadius.circular(30.0),
-              ),
-              margin: const EdgeInsets.fromLTRB(6, 6, 6, 6),
+              decoration: boxDecoration,
+              margin: const EdgeInsets.all(6),
               child: Column(
                 children: [
                   TextButton(
                     onPressed: () {},
-                    child: const Text(
+                    child: Text(
                       '6',
-                      style: TextStyle(
-                          fontFamily: 'SF_Pro_Text',
-                          fontSize: 25,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xFF000000)),
+                      style: sfProText25,
                     ),
                   ),
-                  const Expanded(
+                  Expanded(
                     child: Text(
-                      'M N O',
-                      style: TextStyle(
-                          fontFamily: 'SF_Pro_Text',
-                          fontSize: 10,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xFF000000)),
+                      underNumber6,
+                      style: sfProText10,
                     ),
                   ),
                 ],
@@ -223,33 +156,21 @@ class numbersOfKeyboard extends StatelessWidget {
             Container(
               width: 117,
               height: 66,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                shape: BoxShape.rectangle,
-                borderRadius: BorderRadius.circular(30.0),
-              ),
-              margin: const EdgeInsets.fromLTRB(6, 6, 6, 6),
+              decoration: boxDecoration,
+              margin: const EdgeInsets.all(6),
               child: Column(
                 children: [
                   TextButton(
                     onPressed: () {},
-                    child: const Text(
+                    child: Text(
                       '7',
-                      style: TextStyle(
-                          fontFamily: 'SF_Pro_Text',
-                          fontSize: 25,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xFF000000)),
+                      style: sfProText25,
                     ),
                   ),
-                  const Expanded(
+                  Expanded(
                     child: Text(
-                      'P Q R S',
-                      style: TextStyle(
-                          fontFamily: 'SF_Pro_Text',
-                          fontSize: 10,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xFF000000)),
+                      underNumber7,
+                      style: sfProText10,
                     ),
                   ),
                 ],
@@ -258,33 +179,21 @@ class numbersOfKeyboard extends StatelessWidget {
             Container(
               width: 117,
               height: 66,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                shape: BoxShape.rectangle,
-                borderRadius: BorderRadius.circular(30.0),
-              ),
-              margin: const EdgeInsets.fromLTRB(6, 6, 6, 6),
+              decoration: boxDecoration,
+              margin: const EdgeInsets.all(6),
               child: Column(
                 children: [
                   TextButton(
                     onPressed: () {},
-                    child: const Text(
+                    child: Text(
                       '8',
-                      style: TextStyle(
-                          fontFamily: 'SF_Pro_Text',
-                          fontSize: 25,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xFF000000)),
+                      style: sfProText25,
                     ),
                   ),
-                  const Expanded(
+                  Expanded(
                     child: Text(
-                      'T U V',
-                      style: TextStyle(
-                          fontFamily: 'SF_Pro_Text',
-                          fontSize: 10,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xFF000000)),
+                      underNumber8,
+                      style: sfProText10,
                     ),
                   ),
                 ],
@@ -293,33 +202,21 @@ class numbersOfKeyboard extends StatelessWidget {
             Container(
               width: 117,
               height: 66,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                shape: BoxShape.rectangle,
-                borderRadius: BorderRadius.circular(30.0),
-              ),
-              margin: const EdgeInsets.fromLTRB(6, 6, 6, 6),
+              decoration: boxDecoration,
+              margin: const EdgeInsets.all(6),
               child: Column(
                 children: [
                   TextButton(
                     onPressed: () {},
-                    child: const Text(
+                    child: Text(
                       '9',
-                      style: TextStyle(
-                          fontFamily: 'SF_Pro_Text',
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xFF000000)),
+                      style: sfProText25,
                     ),
                   ),
-                  const Expanded(
+                  Expanded(
                     child: Text(
-                      'W X Y Z',
-                      style: TextStyle(
-                          fontFamily: 'SF_Pro_Text',
-                          fontSize: 10,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xFF000000)),
+                      underNumber9,
+                      style: sfProText10,
                     ),
                   ),
                 ],
@@ -332,45 +229,50 @@ class numbersOfKeyboard extends StatelessWidget {
             Container(
               width: 117,
               height: 66,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                shape: BoxShape.rectangle,
-                borderRadius: BorderRadius.circular(30.0),
+              decoration: boxDecoration,
+              margin: const EdgeInsets.only(
+                left: 129,
+                top: 6,
+                bottom: 6,
               ),
-              margin: const EdgeInsets.fromLTRB(129, 6, 0, 6),
               child: Column(
                 children: [
                   Expanded(
                     child: TextButton(
                       onPressed: () {},
-                      child: const Text(
+                      child: Text(
                         '0',
-                        style: TextStyle(
-                            fontFamily: 'SF_Pro_Text',
-                            fontSize: 25,
-                            fontWeight: FontWeight.bold,
-                            color: Color(0xFF000000)),
+                        style: sfProText25,
                       ),
                     ),
-                  )
+                  ),
                 ],
               ),
             ),
             Container(
-              margin: const EdgeInsets.fromLTRB(56, 0, 0, 0),
-              child: IconButton(onPressed: () {}, icon: cancel),
-            )
+              margin: const EdgeInsets.only(
+                left: 56,
+              ),
+              child: IconButton(
+                onPressed: () {},
+                icon: cancel,
+              ),
+            ),
           ],
         ),
         Center(
           child: Container(
-          margin: const EdgeInsets.fromLTRB(0, 0, 14, 5),
-          constraints: const BoxConstraints(
-            maxWidth: 134,
-            maxHeight: 5,
+            margin: const EdgeInsets.only(
+              right: 14,
+              bottom: 5,
+            ),
+            constraints: const BoxConstraints(
+              maxWidth: 134,
+              maxHeight: 5,
+            ),
+            color: number,
           ),
-          color: const Color(0xFF000000),
-        ),)
+        ),
       ],
     );
   }

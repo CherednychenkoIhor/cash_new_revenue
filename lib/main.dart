@@ -1,20 +1,21 @@
+import 'package:cash_new_revenue/utils/colors.dart';
+import 'package:cash_new_revenue/recourses/homePage.dart';
 import 'package:flutter/material.dart';
-import 'recourses/home_page.dart';
+
 
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  static const String _title = 'Flutter Code Sample';
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-          useMaterial3: true, colorSchemeSeed: const Color(0xffffffff)),
-      title: _title,
+        useMaterial3: true,
+        colorSchemeSeed: colorScheme,
+      ),
       home: const HomePage(),
     );
   }

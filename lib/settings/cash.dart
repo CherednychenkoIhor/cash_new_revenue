@@ -1,4 +1,3 @@
-import 'package:cash_new_revenue/utils/colors.dart';
 import 'package:cash_new_revenue/utils/const.dart';
 import 'package:flutter/material.dart';
 
@@ -10,28 +9,35 @@ class Cash extends StatelessWidget {
     return Row(
       children: [
         Container(
-            margin: const EdgeInsets.fromLTRB(16, 13, 227, 13),
-            child: const Text('Account',
-                style: TextStyle(
-                    fontFamily: 'SF_Pro_Text',
-                    fontSize: 15,
-                    fontWeight: FontWeight.bold,
-                    color: Color(0xB0232C2D)))),
-        Container(
-          padding: const EdgeInsets.fromLTRB(21, 12, 0, 12),
-          child: const Text('Cash',
-              textAlign: TextAlign.end,
-              style: TextStyle(
-                  fontFamily: 'SF_Pro_Text',
-                  fontSize: 16,
-                  fontWeight: FontWeight.bold,
-                  color: primary)),
+          margin: const EdgeInsets.fromLTRB(16, 13, 227, 13),
+          child: Text(
+            account,
+            style: sfProText15,
+          ),
         ),
-        Expanded(child: IconButton(
+        Container(
+          padding: const EdgeInsets.only(
+            left: 21,
+            top: 12,
+            bottom: 12,
+          ),
+          child: Text(
+            cash,
+            textAlign: TextAlign.end,
+            style: sfProText16,
+          ),
+        ),
+        Expanded(
+          child: IconButton(
             onPressed: () {},
             icon: navigNext,
-            padding: const EdgeInsets.fromLTRB(0, 14.11, 0, 14.11),
-            alignment: Alignment.bottomLeft),),
+            padding: const EdgeInsets.only(
+              top: 14.11,
+              bottom: 14.11,
+            ),
+            alignment: Alignment.bottomLeft,
+          ),
+        ),
       ],
     );
   }
