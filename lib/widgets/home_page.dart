@@ -1,10 +1,11 @@
-import 'package:cash_new_revenue/recourses/switch.dart';
+import 'package:cash_new_revenue/utils/fonts.dart';
+import 'package:cash_new_revenue/utils/string.dart';
+import 'package:cash_new_revenue/widgets/switch.dart';
 import 'package:cash_new_revenue/settings/optional.dart';
 import 'package:cash_new_revenue/settings/cash.dart';
 import 'package:cash_new_revenue/settings/date.dart';
 import 'package:cash_new_revenue/settings/salary.dart';
-import 'package:cash_new_revenue/recourses/miniAppBar.dart';
-import 'package:cash_new_revenue/recourses/numbers.dart';
+import 'package:cash_new_revenue/widgets/numbers.dart';
 import 'package:cash_new_revenue/utils/colors.dart';
 import 'package:cash_new_revenue/utils/const.dart';
 import 'package:flutter/material.dart';
@@ -16,31 +17,50 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        padding: const EdgeInsets.only(
-          top: 30,
+      appBar: AppBar(
+        backgroundColor: colorScheme,
+        leading: TextButton(
+          onPressed: () {},
+          child: Text(cansel, style: sfProText17),
         ),
+        leadingWidth: 100,
+        centerTitle: true,
+        title: Text(
+          income,
+          style: GoogleFonts.sourceSansPro(
+            textStyle: const TextStyle(
+              fontSize: 17,
+              fontWeight: FontWeight.w600,
+            ),
+          ),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () {},
+            child: Text(done, style: sfProText17),
+          ),
+        ],
+      ),
+      body: Container(
+        // padding: const EdgeInsets.only(top: 30),
         color: colorHomePage,
         child: Column(
           children: [
-            const MiniAppBar(),
+            // const MiniAppBar(),
             divider,
             const SwitchWidget(),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Container(
-                  margin: const EdgeInsets.only(
-                    left: 16,
-                    top: 8,
-                    bottom: 8,
-                  ),
+                  margin: const EdgeInsets.only(left: 16, top: 8, bottom: 8),
                   child: Text(
                     settings,
                     textAlign: TextAlign.end,
                     style: GoogleFonts.sourceSansPro(
                       textStyle: const TextStyle(
                         fontSize: 14,
+                        fontWeight: FontWeight.w600,
                         color: optionalColor,
                       ),
                     ),
@@ -60,11 +80,7 @@ class HomePage extends StatelessWidget {
             Row(
               children: [
                 Container(
-                  margin: const EdgeInsets.only(
-                    left: 16,
-                    top: 13,
-                    bottom: 13,
-                  ),
+                  margin: const EdgeInsets.only(left: 16, top: 13, bottom: 13),
                   child: Text(
                     notes,
                     style: sfProText15,
@@ -72,13 +88,11 @@ class HomePage extends StatelessWidget {
                 ),
               ],
             ),
-            Container(
-              margin: const EdgeInsets.only(
-                top: 14,
-              ),
-              color: containerColor,
-              child: const NumbersOfKeyboard(),
-            ),
+            // Container(
+            //   margin: const EdgeInsets.only(top: 14),
+            //   color: containerColor,
+            //   child: const NumbersOfKeyboard(),
+            // ),
           ],
         ),
       ),

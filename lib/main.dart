@@ -1,7 +1,6 @@
 import 'package:cash_new_revenue/utils/colors.dart';
-import 'package:cash_new_revenue/recourses/homePage.dart';
+import 'package:cash_new_revenue/widgets/home_page.dart';
 import 'package:flutter/material.dart';
-
 
 void main() => runApp(const MyApp());
 
@@ -12,10 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        useMaterial3: true,
-        colorSchemeSeed: colorScheme,
-      ),
+      theme: ThemeData(useMaterial3: true, colorSchemeSeed: colorScheme),
       home: const HomePage(),
     );
   }
