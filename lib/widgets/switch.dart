@@ -1,18 +1,17 @@
 import 'package:cash_new_revenue/utils/colors.dart';
 import 'package:cash_new_revenue/utils/string.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class SwitchWidget extends StatefulWidget {
-  const SwitchWidget({Key? key}) : super(key: key);
+class SwitchWidget extends StatelessWidget {
+  final bool isOn;
+  final Function updateIsOn;
 
-  @override
-  State<SwitchWidget> createState() => _SwitchWidgetState();
-}
-
-class _SwitchWidgetState extends State<SwitchWidget> {
-  bool isOn = true;
+  const SwitchWidget({
+    Key? key,
+    required this.isOn,
+    required this.updateIsOn,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -27,27 +26,23 @@ class _SwitchWidgetState extends State<SwitchWidget> {
               trackColor: trackColor,
               value: isOn,
               onChanged: (_isOn) {
-                setState(
-                  () {
-                    isOn = _isOn;
-                  },
-                );
+                updateIsOn();
               },
               activeColor: primary,
             ),
           ),
           Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.end,
+            mainAxisSize: MainAxisSize.min,
             children: [
               getMinus,
               Text(
                 zero,
                 textAlign: TextAlign.end,
-                style: GoogleFonts.sourceSansPro(
+                style: GoogleFonts.poppins(
                   textStyle: TextStyle(
                     fontSize: 40,
-                    fontWeight: FontWeight.bold,
+                    fontWeight: FontWeight.w500,
                     color: isOn ? primary : trackColor,
                   ),
                 ),
@@ -76,7 +71,7 @@ class _SwitchWidgetState extends State<SwitchWidget> {
             style: GoogleFonts.sourceSansPro(
               textStyle: const TextStyle(
                 fontSize: 40,
-                fontWeight: FontWeight.bold,
+                fontWeight: FontWeight.w700,
                 color: trackColor,
               ),
             ),

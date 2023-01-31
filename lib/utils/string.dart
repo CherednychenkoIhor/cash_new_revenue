@@ -1,4 +1,5 @@
 const String income = 'Income';
+const String expense = 'Expense';
 const String settings = 'Settings';
 const String cansel = 'Cancel';
 const String account = 'Account';
@@ -7,6 +8,7 @@ const String date = 'Date';
 const String today = 'Today';
 const String category = 'Category';
 const String salary = 'Salary';
+const String food = 'Food & Restaurants';
 const String transfer = 'Transfer from Account';
 const String optional = 'Optional';
 const String notes = 'Notes';

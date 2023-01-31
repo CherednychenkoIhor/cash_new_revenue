@@ -1,18 +1,30 @@
 import 'package:cash_new_revenue/utils/fonts.dart';
 import 'package:cash_new_revenue/utils/string.dart';
-import 'package:cash_new_revenue/widgets/switch.dart';
 import 'package:cash_new_revenue/settings/optional.dart';
 import 'package:cash_new_revenue/settings/cash.dart';
 import 'package:cash_new_revenue/settings/date.dart';
-import 'package:cash_new_revenue/settings/salary.dart';
 import 'package:cash_new_revenue/widgets/numbers.dart';
 import 'package:cash_new_revenue/utils/colors.dart';
 import 'package:cash_new_revenue/utils/const.dart';
+import 'package:cash_new_revenue/widgets/switch.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  bool isOn = true;
+
+  void updateIsOn() {
+    setState(() {
+      isOn = !isOn;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +38,7 @@ class HomePage extends StatelessWidget {
         leadingWidth: 100,
         centerTitle: true,
         title: Text(
-          income,
+          isOn ? income : expense,
           style: GoogleFonts.sourceSansPro(
             textStyle: const TextStyle(
               fontSize: 17,
@@ -42,13 +54,11 @@ class HomePage extends StatelessWidget {
         ],
       ),
       body: Container(
-        // padding: const EdgeInsets.only(top: 30),
         color: colorHomePage,
         child: Column(
           children: [
-            // const MiniAppBar(),
-            divider,
-            const SwitchWidget(),
+            const Divider(height: 1, color: dividerColor),
+            SwitchWidget(isOn: isOn, updateIsOn: updateIsOn),
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
@@ -69,7 +79,37 @@ class HomePage extends StatelessWidget {
               ],
             ),
             divider,
-            const Salary(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Container(
+                  margin: const EdgeInsets.only(left: 16),
+                  child: Text(category, style: sfProText15),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    GestureDetector(
+                      onTap: () {},
+                      child: Text(
+                        isOn ? salary : food,
+                        textAlign: TextAlign.end,
+                        style: sfProText16,
+                      ),
+                    ),
+                    SizedBox(
+                      width: 31,
+                      child: IconButton(
+                        onPressed: () {},
+                        icon: navigNext,
+                        padding: const EdgeInsets.only(top: 4, bottom: 4),
+                        tooltip: category,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
             divider,
             const Date(),
             divider,

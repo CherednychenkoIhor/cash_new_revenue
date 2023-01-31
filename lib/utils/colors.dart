@@ -11,4 +11,5 @@ const Color trackColor = Color(0xfff8777d);
 const Color settingsColor = Color(0xB0232C2D);
 const Color optionalColor = Color(0x56232C2D);
 const Color containerColor = Color(0x90D2D5DB);
+const Color dividerColor = Color(0x2c232c2d);
 

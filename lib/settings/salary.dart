@@ -20,7 +20,7 @@ class Salary extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             SizedBox(
-              width: 46,
+              width: 47,
               child: GestureDetector(
                 onTap: () {},
                 child: Text(
@@ -29,19 +29,6 @@ class Salary extends StatelessWidget {
                   style: sfProText16,
                 ),
               ),
-              // width: 61,
-              // TextButton(
-              //   style: const ButtonStyle(
-              //   ),
-              //   onPressed: () {},
-              //   child: Text(salary, style: sfProText16),
-              // ),
-
-              // width: 46,
-              // GestureDetector(
-              //   onTap: (){},
-              //   child: Text(salary, style: sfProText16),
-              // ),
             ),
             SizedBox(
               width: 31,
@@ -52,17 +39,6 @@ class Salary extends StatelessWidget {
                 tooltip: category,
               ),
             ),
-
-            // SizedBox(
-            //   width: 27,
-            //   child: IconButton(
-            //     onPressed: () {},
-            //     icon: navigNext,
-            //     //padding: const EdgeInsets.only(top: 13, bottom: 13),
-            //     tooltip: category,
-            //     alignment: Alignment.bottomCenter,
-            //   ),
-            // ),
           ],
         ),
       ],
