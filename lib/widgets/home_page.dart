@@ -7,8 +7,8 @@ import 'package:cash_new_revenue/widgets/numbers.dart';
 import 'package:cash_new_revenue/utils/colors.dart';
 import 'package:cash_new_revenue/utils/const.dart';
 import 'package:cash_new_revenue/widgets/switch.dart';
+import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -39,12 +39,7 @@ class _HomePageState extends State<HomePage> {
         centerTitle: true,
         title: Text(
           isOn ? income : expense,
-          style: GoogleFonts.sourceSansPro(
-            textStyle: const TextStyle(
-              fontSize: 17,
-              fontWeight: FontWeight.w600,
-            ),
-          ),
+          style: sfProText17WC,
         ),
         actions: [
           TextButton(
@@ -67,13 +62,7 @@ class _HomePageState extends State<HomePage> {
                   child: Text(
                     settings,
                     textAlign: TextAlign.end,
-                    style: GoogleFonts.sourceSansPro(
-                      textStyle: const TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w600,
-                        color: optionalColor,
-                      ),
-                    ),
+                    style: sfProText14,
                   ),
                 ),
               ],
@@ -89,21 +78,28 @@ class _HomePageState extends State<HomePage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    GestureDetector(
-                      onTap: () {},
-                      child: Text(
-                        isOn ? salary : food,
-                        textAlign: TextAlign.end,
-                        style: sfProText16,
-                      ),
-                    ),
                     SizedBox(
-                      width: 31,
-                      child: IconButton(
-                        onPressed: () {},
-                        icon: navigNext,
-                        padding: const EdgeInsets.only(top: 4, bottom: 4),
-                        tooltip: category,
+                      child: DropdownButtonHideUnderline(
+                        child: DropdownButton2(
+                          hint: Text(
+                            isOn ? salary : food,
+                            style: sfProText16,
+                          ),
+                          style: sfProText17,
+                          icon: navigNext,
+                          items: _addDividersAfterItems(items),
+                          customItemsHeights: _getCustomItemsHeights(),
+                          value: selectedValue,
+                          onChanged: (value) {
+                            setState(() {
+                              selectedValue = value as String;
+                            });
+                          },
+                          alignment: AlignmentDirectional.centerEnd,
+                          buttonHeight: 40,
+                          buttonWidth: 162,
+                          dropdownWidth: 164,
+                        ),
                       ),
                     ),
                   ],
@@ -137,5 +133,44 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
     );
+  }
+
+  List<DropdownMenuItem<String>> _addDividersAfterItems(List<String> items) {
+    List<DropdownMenuItem<String>> menuItems = [];
+    for (var item in items) {
+      menuItems.addAll(
+        [
+          DropdownMenuItem<String>(
+            value: item,
+            child: Text(
+              item,
+              style: sfProText16
+            ),
+          ),
+          if (item != items.last)
+            const DropdownMenuItem<String>(
+              enabled: false,
+              child: Divider(
+                height: 1,
+                color: dividerColor,
+              ),
+            ),
+        ],
+      );
+    }
+    return menuItems;
+  }
+
+  List<double> _getCustomItemsHeights() {
+    List<double> itemsHeights = [];
+    for (var i = 0; i < (items.length * 2) - 1; i++) {
+      if (i.isEven) {
+        itemsHeights.add(30); //30
+      }
+      if (i.isOdd) {
+        itemsHeights.add(4); //3
+      }
+    }
+    return itemsHeights;
   }
 }

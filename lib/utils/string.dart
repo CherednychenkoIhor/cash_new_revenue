@@ -22,3 +22,14 @@ const String underNumber6 = 'M N O';
 const String underNumber7 = 'P G R S';
 const String underNumber8 = 'T U V';
 const String underNumber9 = 'W X Y Z';
+
+String? selectedValue;
+
+final List<String> items = [
+  'Rental revenue',
+  'Car',
+  'Salary',
+  'Food & Restaurants',
+  'Coffee',
+  'Mobile Account',
+];
