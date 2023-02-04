@@ -75,34 +75,27 @@ class _HomePageState extends State<HomePage> {
                   margin: const EdgeInsets.only(left: 16),
                   child: Text(category, style: sfProText15),
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    SizedBox(
-                      child: DropdownButtonHideUnderline(
-                        child: DropdownButton2(
-                          hint: Text(
-                            isOn ? salary : food,
-                            style: sfProText16,
-                          ),
-                          style: sfProText17,
-                          icon: navigNext,
-                          items: _addDividersAfterItems(items),
-                          customItemsHeights: _getCustomItemsHeights(),
-                          value: selectedValue,
-                          onChanged: (value) {
-                            setState(() {
-                              selectedValue = value as String;
-                            });
-                          },
-                          alignment: AlignmentDirectional.centerEnd,
-                          buttonHeight: 40,
-                          buttonWidth: 173,
-                          dropdownWidth: 164,
-                        ),
+                Flexible(
+                  child: DropdownButtonHideUnderline(
+                    child: DropdownButton2(
+                      hint: Text(
+                        isOn ? salary : food,
+                        style: sfProText16,
                       ),
+                      style: sfProText17,
+                      icon: navigNext,
+                      items: _addDividersAfterItems(items),
+                      customItemsHeights: _getCustomItemsHeights(),
+                      value: selectedValue,
+                      onChanged: (value) {
+                        setState(() {
+                          selectedValue = value as String;
+                        });
+                      },
+                      alignment: AlignmentDirectional.centerEnd,
+                      buttonHeight: 40,
                     ),
-                  ],
+                  ),
                 ),
               ],
             ),
@@ -143,10 +136,7 @@ class _HomePageState extends State<HomePage> {
         [
           DropdownMenuItem<String>(
             value: item,
-            child: Text(
-              item,
-              style: sfProText16
-            ),
+            child: Text(item, style: sfProText16),
           ),
           if (item != items.last)
             const DropdownMenuItem<String>(

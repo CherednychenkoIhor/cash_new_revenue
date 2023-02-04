@@ -21,21 +21,16 @@ class SwitchWidget extends StatelessWidget {
       margin: const EdgeInsets.only(top: 14),
       child: Row(
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              Container(
-                padding: const EdgeInsets.only(left: 12),
-                child: CupertinoSwitch(
-                  trackColor: trackColor,
-                  value: isOn,
-                  onChanged: (_isOn) {
-                    updateIsOn();
-                  },
-                  activeColor: primary,
-                ),
-              ),
-            ],
+          Container(
+            padding: const EdgeInsets.only(left: 12),
+            child: CupertinoSwitch(
+              trackColor: trackColor,
+              value: isOn,
+              onChanged: (_isOn) {
+                updateIsOn();
+              },
+              activeColor: primary,
+            ),
           ),
           Flexible(flex: 2, child: Container()),
           Flexible(
@@ -81,6 +76,7 @@ class SwitchWidget extends StatelessWidget {
                     ),
                   ),
                 ),
+                isDense: true,
                 isCollapsed: true,
                 enabledBorder: const OutlineInputBorder(
                   borderSide: BorderSide(
