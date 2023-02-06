@@ -17,36 +17,28 @@ class _CashState extends State<Cash> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leadingWidth: 150,
-        // IconButton(onPressed: (){}, icon: back),
+        leadingWidth: 130,
         automaticallyImplyLeading: true,
         leading: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Flexible(
-                // fit: FlexFit.loose,
                 flex: 2,
-                child: Container(
-                  margin: EdgeInsets.only(right: 4),
-                  child: IconButton(
-                      onPressed: () {
-                        Navigator.of(context).pop(MaterialPageRoute(
-                            builder: (context) => const HomePage()));
-                      },
-                      icon: back),
-                )),
+                child: IconButton(
+                    alignment: Alignment.centerLeft,
+                    padding: const EdgeInsets.all(0),
+                    onPressed: () {
+                      Navigator.of(context).pop(MaterialPageRoute(
+                          builder: (context) => const HomePage()));
+                    },
+                    icon: back)),
             Flexible(
-              // fit: FlexFit.loose,
-              flex: 7,
-              child: GestureDetector(
-                  onTap: () {
-                    Navigator.of(context).pop(MaterialPageRoute(
-                        builder: (context) => const HomePage()));
-                  },
-                  child: Text(accounts, style: sfProText17WC)),
-            ),
-            Flexible(flex: 1,child: Container()),
-            Flexible(flex: 1,child: Container()),
+                flex: 9,
+                child: GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).pop(MaterialPageRoute(
+                          builder: (context) => const HomePage()));
+                    },
+                    child: Text(accounts, style: sfProText17WC))),
           ],
         ),
         title: Text(cash, style: sfProText17WC),
