@@ -3,6 +3,7 @@ const String expense = 'Expense';
 const String settings = 'Settings';
 const String cansel = 'Cancel';
 const String account = 'Account';
+const String accounts = 'Accounts';
 const String cash = 'Cash';
 const String date = 'Date';
 const String nowDay = 'Today';

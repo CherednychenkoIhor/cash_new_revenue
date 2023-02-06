@@ -1,7 +1,7 @@
 import 'package:cash_new_revenue/utils/fonts.dart';
 import 'package:cash_new_revenue/utils/string.dart';
 import 'package:cash_new_revenue/settings/optional.dart';
-import 'package:cash_new_revenue/settings/cash.dart';
+import 'package:cash_new_revenue/settings/account.dart';
 import 'package:cash_new_revenue/settings/date.dart';
 import 'package:cash_new_revenue/widgets/numbers.dart';
 import 'package:cash_new_revenue/utils/colors.dart';
@@ -102,7 +102,7 @@ class _HomePageState extends State<HomePage> {
             divider,
             const Date(),
             divider,
-            const Cash(),
+            const Account(),
             divider,
             const Optional(),
             divider,

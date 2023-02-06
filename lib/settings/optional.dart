@@ -11,39 +11,38 @@ class Optional extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      mainAxisAlignment: MainAxisAlignment.start,
       children: [
         Container(
           margin: const EdgeInsets.only(left: 16),
           child: Text(transfer, style: sfProText15),
         ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: [
-            GestureDetector(
-              onTap: () {},
-              child: Text(
-                optional,
-                textAlign: TextAlign.end,
-                style: GoogleFonts.sourceSansPro(
-                  textStyle: const TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w600,
-                    color: optionalColor,
-                  ),
+        Flexible(flex: 6,child: Container()),
+        Flexible(
+          flex: 3,
+          child: GestureDetector(
+            onTap: () {},
+            child: Text(
+              optional,
+              textAlign: TextAlign.end,
+              style: GoogleFonts.sourceSansPro(
+                textStyle: const TextStyle(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w600,
+                  color: optionalColor,
                 ),
               ),
             ),
-            SizedBox(
-              width: 31,
-              child: IconButton(
-                onPressed: () {},
-                icon: navigNext,
-                padding: const EdgeInsets.only(top: 4, bottom: 4),
-                tooltip: category,
-              ),
-            ),
-          ],
+          ),
+        ),
+        Flexible(
+          flex: 1,
+          child: IconButton(
+            onPressed: () {},
+            icon: navigNext,
+            padding: const EdgeInsets.only(top: 4, bottom: 4),
+            tooltip: optional,
+          ),
         ),
       ],
     );
