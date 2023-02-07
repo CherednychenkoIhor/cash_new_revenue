@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 const Color primary = Color(0xff65bcbf);
+const Color grey = Color(0xb3ffffff);
 const Color test = Color(0xff9b9f9f);
 const Color colorScheme = Color(0xffffffff);
 const Color colorHomePage = Color(0xffffffff);

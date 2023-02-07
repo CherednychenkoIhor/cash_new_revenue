@@ -3,7 +3,6 @@ import 'package:cash_new_revenue/utils/string.dart';
 import 'package:cash_new_revenue/settings/optional.dart';
 import 'package:cash_new_revenue/settings/account.dart';
 import 'package:cash_new_revenue/settings/date.dart';
-import 'package:cash_new_revenue/widgets/numbers.dart';
 import 'package:cash_new_revenue/utils/colors.dart';
 import 'package:cash_new_revenue/utils/const.dart';
 import 'package:cash_new_revenue/widgets/switch.dart';
@@ -117,12 +116,6 @@ class _HomePageState extends State<HomePage> {
                 ),
               ],
             ),
-            // !!!TextFormField!!!
-            // Container(
-            //   margin: const EdgeInsets.only(top: 14),
-            //   color: containerColor,
-            //   child: const NumbersOfKeyboard(),
-            // ),
           ],
         ),
       ),

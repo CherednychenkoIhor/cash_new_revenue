@@ -11,14 +11,23 @@ TextStyle sfProText14 = GoogleFonts.sourceSansPro(
 TextStyle sfProText15 = GoogleFonts.sourceSansPro(
     fontSize: 15, fontWeight: FontWeight.w600, color: settingsColor);
 
+TextStyle sfProText15Tap = GoogleFonts.sourceSansPro(
+    fontSize: 15, fontWeight: FontWeight.w600);
+
 TextStyle sfProText16 = GoogleFonts.sourceSansPro(
     fontSize: 16, fontWeight: FontWeight.w500, color: primary);
 
 TextStyle sfProText17 = GoogleFonts.sourceSansPro(
     fontSize: 17, fontWeight: FontWeight.w600, color: primary);
 
-TextStyle sfProText17WC =
-    GoogleFonts.sourceSansPro(fontSize: 17, fontWeight: FontWeight.w600);
+TextStyle sfProText17WC = GoogleFonts.sourceSansPro(
+    fontSize: 17, fontWeight: FontWeight.w600, color: colorScheme);
+
+TextStyle sfProText20GR = GoogleFonts.sourceSansPro(
+    fontSize: 20, fontWeight: FontWeight.w500, color: grey);
+
+TextStyle sfProText20WC = GoogleFonts.sourceSansPro(
+    fontSize: 20, fontWeight: FontWeight.w500, color: colorScheme);
 
 TextStyle sfProText25 = GoogleFonts.sourceSansPro(
     fontSize: 25, fontWeight: FontWeight.w600, color: number);
