@@ -5,6 +5,9 @@ import 'package:cash_new_revenue/utils/colors.dart';
 TextStyle sfProText10 = GoogleFonts.sourceSansPro(
     fontSize: 10, fontWeight: FontWeight.w600, color: number);
 
+TextStyle sfProText12GR = GoogleFonts.sourceSansPro(
+    fontSize: 12, fontWeight: FontWeight.w600, color: grey12);
+
 TextStyle sfProText14 = GoogleFonts.sourceSansPro(
     fontSize: 14, fontWeight: FontWeight.w600, color: optionalColor);
 
@@ -17,6 +20,9 @@ TextStyle sfProText15Tap = GoogleFonts.sourceSansPro(
 TextStyle sfProText16 = GoogleFonts.sourceSansPro(
     fontSize: 16, fontWeight: FontWeight.w500, color: primary);
 
+TextStyle sfProText16Blk = GoogleFonts.sourceSansPro(
+    fontSize: 16, fontWeight: FontWeight.w500, color: listColor);
+
 TextStyle sfProText17 = GoogleFonts.sourceSansPro(
     fontSize: 17, fontWeight: FontWeight.w600, color: primary);
 
@@ -28,6 +34,12 @@ TextStyle sfProText20GR = GoogleFonts.sourceSansPro(
 
 TextStyle sfProText20WC = GoogleFonts.sourceSansPro(
     fontSize: 20, fontWeight: FontWeight.w500, color: colorScheme);
+
+TextStyle poppins22 = GoogleFonts.poppins(
+    fontSize: 22, fontWeight: FontWeight.w500, color: primary);
+
+TextStyle poppins22Red = GoogleFonts.poppins(
+    fontSize: 22, fontWeight: FontWeight.w500, color: trackColor);
 
 TextStyle sfProText25 = GoogleFonts.sourceSansPro(
     fontSize: 25, fontWeight: FontWeight.w600, color: number);

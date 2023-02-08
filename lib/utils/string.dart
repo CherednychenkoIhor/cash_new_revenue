@@ -19,14 +19,20 @@ const String optional = 'Optional';
 const String notes = 'Notes';
 const String done = 'Done';
 const String zero = '\$0';
-const String underNumber2 = 'A B C';
-const String underNumber3 = 'D E F';
-const String underNumber4 = 'G H I';
-const String underNumber5 = 'J K L';
-const String underNumber6 = 'M N O';
-const String underNumber7 = 'P G R S';
-const String underNumber8 = 'T U V';
-const String underNumber9 = 'W X Y Z';
+const String countMoney1 = '\$1500';
+const String countMoney2 = '-\$193.02';
+const String countMoney3 = '\$7500';
+const String countMoney4 = '-\$37';
+const String countMoney5 = '-\$2';
+const String countMoney6 = '-\$5';
+const String countMoney7 = '-\$19.99';
+const String countMoney8 = '-\$138';
+const String rental = 'Rental revenue';
+const String car = 'Car';
+const String coffee = 'Coffee';
+const String mobile = 'Mobile Account';
+const String entertainment = 'Entertainment';
+const String yesterday = 'YESTERDAY';
 
 String? selectedValue;
 
