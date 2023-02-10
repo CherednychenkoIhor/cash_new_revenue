@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 
 const Color grey = Color(0xb3ffffff);
 const Color grey12 = Color(0x4D000000);
+const Color grey30 = Color(0x4D000000);
+const Color grey50 = Color(0x80ffffff);
+const Color grey80 = Color(0xccffffff);
 const Color point = Color(0x4dffffff);
 const Color primary = Color(0xff65bcbf);
 const Color primary10 = Color(0x1a65bcbf);
@@ -19,4 +22,5 @@ const Color containerColor = Color(0x90D2D5DB);
 const Color dividerColor = Color(0x2c232c2d);
 const Color dividerFullColor = Color(0x1A000000);
 const Color listColor = Color(0xCC000000);
-
+const Color filedColor = Color(0x26ffffff);
+const Color percentColor = Color(0x80ffffff);

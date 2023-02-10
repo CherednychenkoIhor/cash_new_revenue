@@ -33,6 +33,15 @@ const String coffee = 'Coffee';
 const String mobile = 'Mobile Account';
 const String entertainment = 'Entertainment';
 const String yesterday = 'YESTERDAY';
+const String balance = 'BALANCE';
+const String money = '\$23 092.20';
+const String percent = '+28.03%';
+const String incomes = 'INCOMES';
+const String expenses = 'EXPENSES';
+const String incMoney = '\$9 821.00';
+const String expMoney = '-\$5 320.80';
+const String numberPercent = '45';
+const String signPercent = '%';
 
 String? selectedValue;
 

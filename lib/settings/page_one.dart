@@ -1,4 +1,6 @@
 
+import 'package:cash_new_revenue/utils/fonts.dart';
+import 'package:cash_new_revenue/utils/string.dart';
 import 'package:flutter/material.dart';
 
 class PageOne extends StatefulWidget {
@@ -12,10 +14,12 @@ class _PageOneState extends State<PageOne> {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Center(child: Text('20000\$'),),
-        Center(child: Text('20000\$'),),
-        Center(child: Text('20000\$'),),
+        Text(balance, style: sfProText12),
+        Text(money, style: sfProText40),
+        Text(percent, style: sfProText16GR),
       ],
     );
   }
